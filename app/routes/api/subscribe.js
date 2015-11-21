@@ -11,6 +11,9 @@ router.post('/:phonenumber/:category', function(req, res) {
   num.number = req.params.phonenumber;
   num.category = req.params.category;
 
+  if (!num.number || num.number.length !== 10) {
+    return res.status(500).json({error: 'number is not valid'});
+  }
   num.save(function(err) {
       if (err) return res.json(err);
       console.log("Saved: " + num);
