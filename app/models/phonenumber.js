@@ -1,9 +1,9 @@
 var mongoose     = require('mongoose');
 var Schema       = mongoose.Schema;
 
-var NumberSchema   = new Schema({
+var PhonenumberSchema   = new Schema({
     number: String,
     category: String
 });
 
-module.exports = mongoose.model('Number', BearSchema);
+module.exports = mongoose.model('Phonenumber', PhonenumberSchema);
