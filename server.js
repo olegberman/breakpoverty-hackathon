@@ -7,6 +7,8 @@
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/access');
 
+var Phonenumber  = require('./app/models/phonenumber');
+
 // call the packages we need
 var express    = require('express');        // call express
 var app        = express();                 // define our app using express
@@ -37,18 +39,18 @@ router.get('/', function(req, res) {
 
 // more routes for our API will happen here
 
-// on routes that end in /bears
+// on routes that end in /subscribe
 // ----------------------------------------------------
 router.route('/subscribe/')
 
-    // create a bear (accessed at POST http://localhost:8080/api/bears)
+    // create a phonenumber (accessed at POST http://localhost:8080/subscribe)
     .post(function(req, res) {
 
-        var num = new Number();      // create a new instance of the Bear model
+        var num = new Phonenumber();      // create a new instance of the Bear model
         num.number = req.body.phonenumber;
         num.category = req.body.category;
 
-        // save the bear and check for errors
+        // save the phonenumber and check for errors
         num.save(function(err) {
             if (err)
                 res.send(err);
