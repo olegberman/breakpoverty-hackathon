@@ -29,7 +29,6 @@ router.post('/', function(req, res) {
                     phoneNumbers: item.number
                 }]
             });
-            console.log(item.number);
         });
         console.log(out);
         var api_call = request({
@@ -38,7 +37,7 @@ router.post('/', function(req, res) {
             headers: {
                 'Content-type': 'application/xml'
             },
-            data: xml(out)
+            body: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' + xml(out)
         });
 
         api_call.then(function(data){
@@ -47,7 +46,6 @@ router.post('/', function(req, res) {
         .catch(function(err) {
             console.log(err);
         });
-        // return res.send(xml(out));
       });
 
 
