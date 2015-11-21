@@ -3,7 +3,7 @@
 var express = require('express');
 var router = express.Router();
 
-var PhoneNumber = require('../../models/PhoneNumber');
+var PhoneNumber = require('../../models/phonenumber');
 
 router.post('/:phonenumber/:category', function(req, res) {
 
