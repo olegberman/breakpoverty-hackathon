@@ -13,7 +13,8 @@ router.post('/:phonenumber/:category', function(req, res) {
 
   num.save(function(err) {
       if (err) return res.json(err);
-      return res.json({ message: 'Phone number created!' });
+      console.log("Saved: " + num);
+      return res.json({ result: 'success' });
   });
 
 });
