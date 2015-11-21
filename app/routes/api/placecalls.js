@@ -30,7 +30,6 @@ router.post('/', function(req, res) {
                 }]
             });
         });
-        console.log(out);
         var api_call = request({
             method: 'POST',
             uri: base_url + subscriber_id + "/" + site_code + "/job?apiKey=" + api_key,
@@ -41,10 +40,10 @@ router.post('/', function(req, res) {
         });
 
         api_call.then(function(data){
-            console.log(data);
+          return res.json({ success: 1 });
         })
         .catch(function(err) {
-            console.log(err);
+          return res.status(500);
         });
       });
 
