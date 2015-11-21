@@ -6,7 +6,7 @@ var request = require('request-promise');
 var Promise = require('bluebird');
 var router = express.Router();
 
-var PhoneNumber = require('../../models/PhoneNumber');
+var PhoneNumber = require('../../models/phonenumber');
 
 var subscriber_id = "0a140225-04-150f39bbbf8-06dfc85a-1b2";
 var site_code = "200000149531";
