@@ -1,9 +1,11 @@
+'use strict';
+
 var mongoose     = require('mongoose');
 var Schema       = mongoose.Schema;
 
-var PhonenumberSchema   = new Schema({
-    number: String,
-    category: String
+var PhoneNumberSchema = new Schema({
+  number: String,
+  category: String
 });
 
-module.exports = mongoose.model('Phonenumber', PhonenumberSchema);
+module.exports = mongoose.model('Phonenumber', PhoneNumberSchema);
