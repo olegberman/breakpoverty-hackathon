@@ -5,11 +5,11 @@ var router = express.Router();
 
 var PhoneNumber = require('../../models/PhoneNumber');
 
-router.post('/', function(req, res) {
+router.post('/:phonenumber/:category', function(req, res) {
 
   var num = new PhoneNumber();
-  num.number = req.body.phonenumber;
-  num.category = req.body.category;
+  num.number = req.params.phonenumber;
+  num.category = req.params.category;
 
   num.save(function(err) {
       if (err) return res.json(err);
