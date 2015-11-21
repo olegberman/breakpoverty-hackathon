@@ -41,14 +41,14 @@ router.get('/', function(req, res) {
 
 // on routes that end in /subscribe
 // ----------------------------------------------------
-router.route('/subscribe/')
+router.route('/subscribe/:phonenumber/:category')
 
     // create a phonenumber (accessed at POST http://localhost:8080/subscribe)
     .post(function(req, res) {
 
         var num = new Phonenumber();      // create a new instance of the Bear model
-        num.number = req.body.phonenumber;
-        num.category = req.body.category;
+        num.number = req.params.phonenumber;
+        num.category = req.params.category;
 
         // save the phonenumber and check for errors
         num.save(function(err) {
