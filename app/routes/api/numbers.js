@@ -14,4 +14,16 @@ router.get('/', function(req, res) {
 
 });
 
+router.get('/:category', function(req, res) {
+  var category = req.params.category;
+
+  PhoneNumber.find({
+    category: category
+  }, function(err, data) {
+    if(err) return res.json(err);
+    return res.json(data);
+  });
+
+});
+
 module.exports = router;
