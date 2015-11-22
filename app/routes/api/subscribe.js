@@ -13,12 +13,12 @@ router.post('/', function(req, res) {
   num.lang = req.body.language;
 
   if (!num.number || num.number.length !== 10) {
-    return res.status(500).json({error: 'number is not valid'});
+    return res.sendStatus(500);
   }
   num.save(function(err) {
       if(err) {
-        if (err.code == 11000) return res.send('You have already subscribed.');
-        return res.send('Error occured');
+        if (err.code == 11000) return res.send('You have already subscribed');
+        return res.sendStatus(500);
       }
       console.log("Saved: " + num);
       return res.sendStatus(200);

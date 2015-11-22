@@ -5,16 +5,15 @@ var router = express.Router();
 
 var PhoneNumber = require('../../models/phonenumber');
 
-router.post('/:phonenumber/:category', function(req, res) {
+router.post('', function(req, res) {
 
   PhoneNumber.remove({
-            number: req.params.phonenumber,
-            category: req.params.category
+            number: req.body.phonenumber,
+            category: req.body.category
         }, function(err, results) {
-            if (err)
-                res.send(err);
+            if(err) return res.sendStatus(500);
             console.log("Delete: " + results);
-            return res.sendStatus(200);
+            res.json({ result: 'success' });
         });
 
 });

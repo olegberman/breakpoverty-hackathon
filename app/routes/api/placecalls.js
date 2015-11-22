@@ -21,7 +21,6 @@ router.post('/', function(req, res) {
             callItems: []
         };
         result.forEach(function(item) {
-          console.log(item);
             out.callItems.push({
                 callItem: [{
                     maxWaitTime: 60
@@ -43,8 +42,6 @@ router.post('/', function(req, res) {
             });
         });
 
-
-        console.log(xml(out));
         var api_call = request({
             method: 'POST',
             uri: base_url + subscriber_id + "/" + site_code + "/job?apiKey=" + api_key,
@@ -57,7 +54,7 @@ router.post('/', function(req, res) {
         api_call.then(function(data){
           return res.sendStatus(200);
         }, function (err) {
-            return res.json({err: err});
+          return res.sendStatus(500);
         })
 
       });

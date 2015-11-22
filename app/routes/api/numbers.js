@@ -8,7 +8,7 @@ var PhoneNumber = require('../../models/phonenumber');
 router.get('/', function(req, res) {
 
   PhoneNumber.find({}, function(err, data) {
-    if(err) return res.json(err);
+    if(err) return res.sendStatus(500);
     return res.json(data);
   });
 
@@ -19,7 +19,7 @@ router.get('/', function(req, res) {
   PhoneNumber.find({
     category: category
   }, function(err, data) {
-    if(err) return res.json(err);
+    if(err) return res.sendStatus(500);
     return res.json(data);
   });
 
