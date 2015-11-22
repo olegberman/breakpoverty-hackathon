@@ -1,7 +1,4 @@
-# breakpoverty-hackathon
-
-## Project Name
-Community Voice Portal
+# Community Voice Portal
 
 ## Elevator Pitch
 Personable, easier, faster and more efficient way to share important and time-sensitive information via a phone
@@ -30,7 +27,7 @@ https://www.youtube.com/watch?v=7brHAZZiiRI
 ## Inspiration
 Local, time-sensitive communication is big issue in Rural Kenya.  One of the stories that was shared with us was that sometimes a Chief would have to go door to door in the village to make an important announcement.  Chief and vast majority of the people (80+% of population) have mobile devices that are capable of placing and receiving phones calls and sms.  
 
-Our solution would make a big impact in rural areas in Kenya and other countries where Village Chief and/or other officials distribute information to the general population via a phone tree or worse yet in-person.  Such time-consuming process has many downsides including people missing an important message or not getting it in time.
+Our solution would make a big impact in rural areas in Kenya and other countries where Village Chief and/or other officials distribute information to the general population via a phone tree or worse yet in-person.  Such time-consuming process has many downsides including people missing an important message or not getting it in time.  Compared to SMS, voice messages can be localized for the 68 languages spoken in Kenya.  It is highly customizable.
 
 ## What it does
 We have chosen to tackle all 3 challenge sets (Education, Health, Agriculture) as well as Community Announcements for this hackathon. The solution we implemented enables personable, easier, faster and more streamlined way to share important, time-sensitive and possibly life-changing information via something as simple as a phone call.  
@@ -40,7 +37,6 @@ For villages where lots of mass information communication for Health, Education 
 - or good health and hygiene message to folks that subscribed to weekly updates, 
 - or female students that had to stay home and take care of the household because their mom was not feeling well that now would be able to get access to coursework notes, homework assignments, etc., 
 - or Village Chief who needs to broadcast an important message to the whole community about some upcoming event or even doctor/dentist coming to visit.
-
 
 ## How we built it
 We used Genesys Premier Edition APIs and Toll-Free Numbers from http://www.genesys.com/angel for Interactive Voice Response (IVR), Text-to-Speech (TTS) and Outbound Calling.  Integration scripts were written and hosted on Digital Ocean with MEAN stack (Mongo, Express, Angular, Node).  
