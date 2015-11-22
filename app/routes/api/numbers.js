@@ -14,8 +14,8 @@ router.get('/', function(req, res) {
 
 });
 
-router.get('/:category', function(req, res) {
-  var category = req.params.category;
+router.get('/', function(req, res) {
+  var category = req.body.category;
   PhoneNumber.find({
     category: category
   }, function(err, data) {

@@ -5,11 +5,11 @@ var router = express.Router();
 
 var PhoneNumber = require('../../models/phonenumber');
 
-router.post('/:phonenumber/:category', function(req, res) {
+router.post('/', function(req, res) {
 
   var num = new PhoneNumber();
-  num.number = req.params.phonenumber;
-  num.category = req.params.category;
+  num.number = req.body.phonenumber;
+  num.category = req.body.category;
 
   if (!num.number || num.number.length !== 10) {
     return res.status(500).json({error: 'number is not valid'});
