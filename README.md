@@ -6,8 +6,11 @@ Community Voice Portal
 ## Elevator Pitch
 Personable, easier, faster and more efficient way to share important and time-sensitive information via a phone
 
+## Demo
+https://www.youtube.com/watch?v=7brHAZZiiRI
+
 ## How To Use
-*Community Message Recording: 855-907-3352*
+**Community Message Recording: 855-907-3352**
 - Call the number above, as you are the Chief or Health Official, Agriculture Expert or a School Teacher (different TOLL-FREE numbers will be provided for different roles)
 - Choose if you want an interaction to be in "1" English or "2" Kiswahili
 - Provide your secure (this can be updated via an API) PIN ("1234") which will allow you to record a message to share with people
@@ -15,14 +18,14 @@ Personable, easier, faster and more efficient way to share important and time-se
 - Provide an expiration date for your message so that we do not play this after the expiration date, Format is MMDDYYYY as type in "12 10 2015" for December 10th, 2015
 - Choose "1" if you want the message to be broadcasted to all Subscribers or "2" if this is just what people can listen to as they call in as the nature of message is not very urgent.
 
-*Community Voice Portal Access	 855-907-3323* 
+**Community Voice Portal Access	 855-907-3323** 
 - Call the number above, as you are a comminity member in need of receiveing urgent communications and messages from Chief,  Health Officials, Agriculture Experts or a School Teachers.  This can be called anytime or you could opt-in to recieve phone calls with recorded message.
 - Choose if you want an interaction to be in "1" English or "2" Kiswahili
 - Press "1" for community, "2" for medicine, "3" for education and "4" for agriculture messages
 - Once you are listening to messages, you can press any key to skip to next message.
 - When you've finished listening to the last message, press "1" to OPT-IN to receive calls with messages instead of calling in every time or press "2" to end the call.
 
-*NOTE: You can see more about this project here: http://devpost.com/software/community-voice-portal/*
+**NOTE: You can see more about this project here: http://devpost.com/software/community-voice-portal/**
 
 ## Inspiration
 Local, time-sensitive communication is big issue in Rural Kenya.  One of the stories that was shared with us was that sometimes a Chief would have to go door to door in the village to make an important announcement.  Chief and vast majority of the people (80+% of population) have mobile devices that are capable of placing and receiving phones calls and sms.  
