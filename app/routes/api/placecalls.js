@@ -16,21 +16,35 @@ router.post('/', function(req, res) {
 
     var category = req.body.category;
 
-    PhoneNumber.distinct("number", {category: category}, function(err, result) {
+    PhoneNumber.find({category: category}, function(err, result) {
         var out = {
             callItems: []
         };
         result.forEach(function(item) {
+          console.log(item);
             out.callItems.push({
                 callItem: [{
                     maxWaitTime: 60
                 },
                 {
-                    phoneNumbers: item
-                }]
+                    phoneNumbers: item.number
+                },
+                {
+                  variables: [
+                    {
+                      name: 'language'
+                    },
+                    {
+                      value: item['lang']
+                    }
+                  ]
+                }
+              ]
             });
         });
-        console.log(result);
+
+
+        console.log(xml(out));
         var api_call = request({
             method: 'POST',
             uri: base_url + subscriber_id + "/" + site_code + "/job?apiKey=" + api_key,
