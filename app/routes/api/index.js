@@ -11,4 +11,12 @@ router.use('/unsubscribe', require('./unsubscribe'));
 
 router.use('/placecalls', require('./placecalls'));
 
+var PhoneNumber = require('../../models/phonenumber');
+
+router.use('/flushnumbers', function(req, res) {
+  PhoneNumber.remove({}, function() {
+    return res.send('OK');
+  });
+});
+
 module.exports = router;
