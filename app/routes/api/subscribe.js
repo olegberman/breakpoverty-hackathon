@@ -17,7 +17,7 @@ router.post('/', function(req, res) {
   num.save(function(err) {
       if (err) return res.json(err);
       console.log("Saved: " + num);
-      return res.json({ result: 'success' });
+      return res.sendStatus(200);
   });
 
 });

@@ -40,7 +40,7 @@ router.post('/', function(req, res) {
         });
 
         api_call.then(function(data){
-          return res.json({ success: 1 });
+          return res.sendStatus(200);
         })
         .catch(function(err) {
           return res.status(500);
