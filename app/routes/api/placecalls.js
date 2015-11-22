@@ -16,7 +16,7 @@ router.post('/', function(req, res) {
 
     var category = req.body.category;
 
-    PhoneNumber.find({category: category}, function(err, result) {
+    PhoneNumber.distinct("number", {category: category}, function(err, result) {
         var out = {
             callItems: []
         };
@@ -26,10 +26,11 @@ router.post('/', function(req, res) {
                     maxWaitTime: 60
                 },
                 {
-                    phoneNumbers: item.number
+                    phoneNumbers: item
                 }]
             });
         });
+        console.log(result);
         var api_call = request({
             method: 'POST',
             uri: base_url + subscriber_id + "/" + site_code + "/job?apiKey=" + api_key,
@@ -41,10 +42,10 @@ router.post('/', function(req, res) {
 
         api_call.then(function(data){
           return res.sendStatus(200);
+        }, function (err) {
+            return res.json({err: err});
         })
-        .catch(function(err) {
-          return res.status(500);
-        });
+
       });
 
 
